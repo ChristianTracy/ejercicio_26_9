@@ -1,0 +1,23 @@
+ANIMALES---------------------------------
+mamiferos  aves reptiles anfibios peces
+---------------------------
+MAMIFIRO------------------
+hombre = caminar,nadar,hablar
+perro =  caminar, ladrar
+ballena = nadar
+----------------------------
+AVES----------------------
+aguila = volar,caminar
+pingüino = caminar, nadar
+----------------------------
+REPTILES-----------------------
+cocodrilo = caminar, nadar
+boa = desplazarse, constricción
+cobra = desplazarse, morder
+--------------------------------
+ANFIBIOS-----------------------
+sapos = saltar,nadar
+-------------------------------
+PECES---------------------------
+tiburon = nadar
+-------------------------------
