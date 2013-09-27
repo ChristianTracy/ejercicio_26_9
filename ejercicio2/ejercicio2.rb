@@ -1,36 +1,38 @@
-class Producto 
-	attr_reader :codigo, :nombre, :precio
-	def initialize (codigo, nombre, precio)
-		@codigo = codigo
-		@nombre = nombre
-		@precio = precio
+class Product 
+	attr_reader :code, :name, :price
+
+	def initialize (code, name, price)
+		@code = code
+		@name = name
+		@price = price
 	end
 end
 
-
+#-----------------------------------------------------
 class Purchase
+	attr_reader:products
 
 	def initialize
-		@productos = []
+		@products = []
 	end
 
-	def add (producto_nuevo)
-		@productos << producto_nuevo 
+	def add (new_product)
+		@products << new_product 
 	end
 
-	def delete (producto_borrar)
-		@productos.delete(producto_borrar)
+	def delete (a_product)
+		@products.delete(a_product)
 	end
 
 	def total
 		total = 0
-		@productos.each do |x|
-			total += x.precio
+		@products.each do |x|
+			total += x.price.to_i
 		end
+		puts total
 	end
 
 	def apply_discount()
-		
+		yield self
 	end
-
 end
