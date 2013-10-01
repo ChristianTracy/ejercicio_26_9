@@ -1,16 +1,22 @@
-#modulos---------------------------------------
-module caminar
-	puts "CAMINO"
+#MODULOS----------------------------------------
+module Caminar
+  def caminar
+    puts "CAMINO"
+  end
 end
 
-module nadar
-	puts "NADO"
+module Nadar
+  def nadar
+    puts "NADO"
+  end
 end
 
-module desplazarse 
-	puts "ME DESPLAZO"
+module Desplazarse
+  def nadar
+    puts "ME DESPLAZO"
+  end
 end
+
 #-----------------------------------------------
-class Animal
-
-end
+#-----------------------------------------------
+class Animal ;end
