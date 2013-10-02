@@ -7,7 +7,7 @@ class Product
     @price = price
   end
 end
-
+#-----------------------------------------------------
 #-----------------------------------------------------
 class Purchase
   attr_reader :products
@@ -20,21 +20,14 @@ class Purchase
 
   def add (new_product)
     @products << new_product
+    @total = @total + new_product.price.to_f #acumulo el precio del nuevo producto
   end
 
-  def delete (code_product) #borro en base a un codigo de producto
-    @products.delete_if {|prod| prod.code == code_product}
+  def delete (a_product)
+    @total = @total - a_product.price.to_f
+    @products.delete(a_product)
   end
 
-  def total
-    @total = 0
-    @products.each do |x|
-    @total += x.price.to_i
-    end
-    puts @total
-  end
-
-  
   def apply_discount
     yield self
   end
